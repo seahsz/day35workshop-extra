@@ -1,0 +1,38 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 94vh;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 96vw;
+}
+
+.title {
+    padding-top: 3vh;
+}
+
+.listing {
+    margin-top: 3vh;
+}
+
+mat-form-field {
+    margin-right: 12px;
+    width: 100%;
+}
+
+.form-button {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+}
+
+

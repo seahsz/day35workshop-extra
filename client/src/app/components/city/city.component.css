@@ -1,0 +1,15 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 98vh;
+}
+
+.apply-font {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.city-table {
+    text-align: center;
+    margin-bottom: 2vh;
+}

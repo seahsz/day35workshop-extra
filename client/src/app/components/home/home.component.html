@@ -1,0 +1,36 @@
+<div class="main">
+    <h1 class="title">WeatherNow</h1>
+    <div class="form-container">
+        <form [formGroup]="form" (ngSubmit)="submitForm()">
+            <mat-form-field class="form-field">
+                <mat-label>Add City</mat-label>
+                <input matInput type="text" placeholder="Enter city name" formControlName="city">
+            </mat-form-field>
+            <div class="form-button">
+                <button class="form-button" type="submit" [disabled]="form.invalid" mat-stroked-button>Add</button>
+            </div>
+        </form>
+    </div>
+    <div class="listing">
+        @if (cities.length <= 0) {
+            <h3>No cities yet</h3>
+        } @else {
+            <table border="1" [cellPadding]="10">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (city of cities; let idx = $index; track idx) {
+                        <tr>
+                            <td><a [routerLink]="['/city', city]">{{ city | titlecase }}</a></td>
+                            <td><button type="button" (click)="deleteCity(city)">-</button></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="main">
+    @if (city$ | async; as city) {
+        <h1>{{ city.name | titlecase }} ({{ city.country }})</h1>
+        
+        <table border="1" class="city-table" [cellPadding]="8">
+            <tr>
+                <td><img [src]="city.icon" alt=""></td>
+                <td>{{ city.description | titlecase }}</td>
+            </tr>
+            <tr>
+                <td>Temperature:</td>
+                <td>{{ city.temp}}<span class="apply-font">&#8451;</span></td>
+            </tr>
+            <tr>
+                <td>Feels like</td>
+                <td>{{ city.feels_like }}<span class="apply-font">&#8451;</span></td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td>{{ city.humidity }}%</td>
+            </tr>
+            <tr>
+                <td>Wind speed</td>
+                <td>{{ city.wind_speed }}m/s</td>
+            </tr>
+        </table>
+    }
+    <button mat-stroked-button type="button" [routerLink]="['/']">Back</button>
+</div>
